@@ -1,0 +1,6 @@
+*.parquet
+data/
+.DS_Store
+.vscode/
+preprocessed_configs/
+*.log
