@@ -18,7 +18,7 @@
 --     end_time   = '2026-01-20 09:45:00.000000000'
 --   );
 
-CREATE VIEW IF NOT EXISTS tca.interval_volume AS
+CREATE OR REPLACE VIEW tca.interval_volume AS
 SELECT
     sym,
     sum(qty) AS total_volume,

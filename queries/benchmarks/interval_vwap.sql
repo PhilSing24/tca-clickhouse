@@ -19,7 +19,7 @@
 --     end_time   = '2026-01-20 09:45:00.000000000'
 --   );
 
-CREATE VIEW IF NOT EXISTS tca.interval_vwap AS
+CREATE OR REPLACE VIEW tca.interval_vwap AS
 SELECT
     sym,
     sum(price * qty) / sum(qty) AS vwap,

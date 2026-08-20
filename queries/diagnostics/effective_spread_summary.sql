@@ -19,7 +19,7 @@
 -- Example:
 --   SELECT * FROM tca.effective_spread_summary(order_id = 'ORD001');
 
-CREATE VIEW IF NOT EXISTS tca.effective_spread_summary AS
+CREATE OR REPLACE VIEW tca.effective_spread_summary AS
 WITH fills AS (
     SELECT
         e.orderid,

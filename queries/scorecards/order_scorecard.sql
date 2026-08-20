@@ -32,7 +32,7 @@
 -- Example:
 --   SELECT * FROM tca.order_scorecard(order_id = 'ORD001');
 
-CREATE VIEW IF NOT EXISTS tca.order_scorecard AS
+CREATE OR REPLACE VIEW tca.order_scorecard AS
 WITH
     ord AS (
         SELECT orderid, sym, side, orderqty, starttime, endtime, arrivalprice

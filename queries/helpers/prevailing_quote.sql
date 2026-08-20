@@ -16,7 +16,7 @@
 --     ts = '2026-01-20 09:35:00.000000000'
 --   );
 
-CREATE VIEW IF NOT EXISTS tca.prevailing_quote AS
+CREATE OR REPLACE VIEW tca.prevailing_quote AS
 SELECT
     sym,
     time,

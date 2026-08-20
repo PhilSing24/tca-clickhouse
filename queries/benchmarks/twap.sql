@@ -26,7 +26,7 @@
 --     end_time   = '2026-01-20 09:45:00.000000000'
 --   );
 
-CREATE VIEW IF NOT EXISTS tca.twap AS
+CREATE OR REPLACE VIEW tca.twap AS
 SELECT
     sym,
     avg((bid + ask) / 2) AS twap,

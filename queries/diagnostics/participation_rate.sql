@@ -17,7 +17,7 @@
 -- Example:
 --   SELECT * FROM tca.participation_rate(order_id = 'ORD001');
 
-CREATE VIEW IF NOT EXISTS tca.participation_rate AS
+CREATE OR REPLACE VIEW tca.participation_rate AS
 WITH
     ord AS (
         SELECT orderid, sym, orderqty, starttime, endtime

@@ -16,7 +16,7 @@
 -- Example:
 --   SELECT * FROM tca.order_vwap(order_id = 'ORD001');
 
-CREATE VIEW IF NOT EXISTS tca.order_vwap AS
+CREATE OR REPLACE VIEW tca.order_vwap AS
 SELECT
     orderid,
     sym,

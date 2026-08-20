@@ -25,7 +25,7 @@
 -- Example:
 --   SELECT * FROM tca.effective_spread_by_execution(order_id = 'ORD001');
 
-CREATE VIEW IF NOT EXISTS tca.effective_spread_by_execution AS
+CREATE OR REPLACE VIEW tca.effective_spread_by_execution AS
 SELECT
     e.orderid,
     e.execid,

@@ -26,7 +26,7 @@
 --     date = '2026-01-20'
 --   );
 
-CREATE VIEW IF NOT EXISTS tca.close_price AS
+CREATE OR REPLACE VIEW tca.close_price AS
 SELECT
     sym,
     time,

@@ -13,7 +13,7 @@
 -- Example:
 --   SELECT * FROM tca.order_info(order_id = 'ORD001');
 
-CREATE VIEW IF NOT EXISTS tca.order_info AS
+CREATE OR REPLACE VIEW tca.order_info AS
 SELECT
     orderid,
     sym,

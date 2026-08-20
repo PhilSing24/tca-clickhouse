@@ -32,7 +32,7 @@
 --     end_time   = '2026-01-20 09:45:00.000000000'
 --   );
 
-CREATE VIEW IF NOT EXISTS tca.pwp AS
+CREATE OR REPLACE VIEW tca.pwp AS
 SELECT
     sym,
     sum(price * qty) / sum(qty) AS pwp,

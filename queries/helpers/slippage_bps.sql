@@ -25,6 +25,6 @@
 --   SELECT slippageBps('BUY', 180.32, 181.125);
 --   -- negative: execution price below benchmark = savings for a BUY
 
-CREATE FUNCTION IF NOT EXISTS slippageBps AS (side, execution_price, benchmark_price) ->
+CREATE OR REPLACE FUNCTION slippageBps AS (side, execution_price, benchmark_price) ->
     multiIf(side = 'BUY', 1, side = 'SELL', -1, NULL)
     * (execution_price - benchmark_price) / benchmark_price * 10000;

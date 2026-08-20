@@ -19,7 +19,7 @@
 --     ts = '2026-01-20 09:35:00.000000000'
 --   );
 
-CREATE VIEW IF NOT EXISTS tca.arrival_price AS
+CREATE OR REPLACE VIEW tca.arrival_price AS
 SELECT
     sym,
     time,

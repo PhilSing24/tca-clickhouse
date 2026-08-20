@@ -17,7 +17,7 @@
 --     date = '2026-01-20'
 --   );
 
-CREATE VIEW IF NOT EXISTS tca.full_day_vwap AS
+CREATE OR REPLACE VIEW tca.full_day_vwap AS
 SELECT
     sym,
     sum(price * qty) / sum(qty) AS vwap,
