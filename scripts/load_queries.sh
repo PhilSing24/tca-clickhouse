@@ -5,8 +5,8 @@
 #   ./load_queries.sh
 #
 # Runs every .sql file under queries/helpers/, queries/orders/,
-# queries/benchmarks/, queries/scorecards/, and queries/reports/
-# (in that order) against ClickHouse.
+# queries/benchmarks/, queries/diagnostics/, queries/scorecards/,
+# and queries/reports/ (in that order) against ClickHouse.
 
 set -e
 
@@ -14,7 +14,7 @@ CLICKHOUSE_BIN="$HOME/clickhouse"
 CLICKHOUSE_HOST="::1"
 QUERIES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)/queries"
 
-for layer in helpers orders benchmarks scorecards reports; do
+for layer in helpers orders benchmarks diagnostics scorecards reports; do
   dir="$QUERIES_DIR/$layer"
   if [[ -d "$dir" ]]; then
     for f in "$dir"/*.sql; do
