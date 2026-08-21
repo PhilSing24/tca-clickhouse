@@ -4,3 +4,4 @@ data/
 .vscode/
 preprocessed_configs/
 *.log
+!sample-data/*.parquet
