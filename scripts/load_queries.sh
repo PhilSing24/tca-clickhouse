@@ -14,7 +14,7 @@ CLICKHOUSE_BIN="$HOME/clickhouse"
 CLICKHOUSE_HOST="::1"
 QUERIES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)/queries"
 
-for layer in helpers orders benchmarks diagnostics scorecards reports; do
+for layer in helpers orders benchmarks diagnostics scorecards reports flat; do
   dir="$QUERIES_DIR/$layer"
   if [[ -d "$dir" ]]; then
     for f in "$dir"/*.sql; do
