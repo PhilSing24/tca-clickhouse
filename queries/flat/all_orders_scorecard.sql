@@ -67,6 +67,8 @@ SELECT
     o.side                                                AS side,
     o.orderqty                                            AS orderqty,
     toDate(o.starttime)                                   AS trading_date,
+    o.starttime                                           AS starttime,
+    o.endtime                                             AS endtime,
     ev.execution_vwap                                     AS execution_vwap,
 
     o.arrivalprice                                        AS arrival_price,
